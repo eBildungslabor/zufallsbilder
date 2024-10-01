@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/pico.min.css">
+    <title>Reflexion zu Gestaltungskompetenz</title>
+</head>
+
+<body>
+    <main class="container">
+        <h1>Dein Zufallsbild: Welche Idee fällt dir dazu ein?</h1>
+
+        <!-- Hier wird ein zufällig ausgewähltes Bild angezeigt -->
+        <div id="image-container">
+            <img id="randomImage" src="1.jpg" alt="Zufallsbild" style="max-width: 100%; height: auto;">
+        </div>
+        <br>
+        <!-- Button, um ein neues zufälliges Bild zu laden -->
+        <button onclick="showRandomImage()">Neues Bild</button>
+
+    </main>
+
+    <footer class="container">
+        <small>Erstellt für den BNE-Lerntag an der Alice-Salomon Schule in Hannover am 1. Oktober 2024 von 
+            <a href="https://ebildungslabor.de">Nele Hirsch (ebildungslabor)</a> • Lizenz: 
+            <a href="https://creativecommons.org/publicdomain/zero/1.0/deed.de">CC0 1.0</a></small>
+    </footer>
+
+    <script>
+        // Funktion, um ein zufälliges Bild anzuzeigen
+        function showRandomImage() {
+            // Erzeuge eine zufällige Zahl zwischen 1 und 30
+            var randomNumber = Math.floor(Math.random() * 30) + 1;
+            // Setze die Bildquelle auf das zufällig ausgewählte Bild
+            document.getElementById("randomImage").src = randomNumber + ".jpg";
+        }
+    </script>
+</body>
+
+</html>
